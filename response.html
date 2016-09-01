@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <h1></h1>
+    <p>为了加快对移动设备友好的页面开发工作，利用媒体查询功能并使用这些工具类可以方便的针对不同设备展示或隐藏页面内容。另外还包含了针对打印机显示或隐藏内容的工具类。</p>
+    <p>有针对性的使用这类工具类，从而避免为同一个网站创建完全不同的版本。相反，通过使用这些工具类可以在不同设备上提供不同的展现形式。</p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped responsive-utilities">
+            <thead>
+            <tr>
+                <th></th>
+                <th>
+                    超小屏幕
+                    <small>手机 (&lt;768px)</small>
+                </th>
+                <th>
+                    小屏幕
+                    <small>平板 (≥768px)</small>
+                </th>
+                <th>
+                    中等屏幕
+                    <small>桌面 (≥992px)</small>
+                </th>
+                <th>
+                    大屏幕
+                    <small>桌面 (≥1200px)</small>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row"><code>.visible-xs-*</code></th>
+                <td class="is-visible">可见</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-hidden">隐藏</td>
+            </tr>
+            <tr>
+                <th scope="row"><code>.visible-sm-*</code></th>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">可见</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-hidden">隐藏</td>
+            </tr>
+            <tr>
+                <th scope="row"><code>.visible-md-*</code></th>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">可见</td>
+                <td class="is-hidden">隐藏</td>
+            </tr>
+            <tr>
+                <th scope="row"><code>.visible-lg-*</code></th>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">可见</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th scope="row"><code>.hidden-xs</code></th>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">可见</td>
+                <td class="is-visible">可见</td>
+                <td class="is-visible">可见</td>
+            </tr>
+            <tr>
+                <th scope="row"><code>.hidden-sm</code></th>
+                <td class="is-visible">可见</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">可见</td>
+                <td class="is-visible">可见</td>
+            </tr>
+            <tr>
+                <th scope="row"><code>.hidden-md</code></th>
+                <td class="is-visible">可见</td>
+                <td class="is-visible">可见</td>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">可见</td>
+            </tr>
+            <tr>
+                <th scope="row"><code>.hidden-lg</code></th>
+                <td class="is-visible">可见</td>
+                <td class="is-visible">可见</td>
+                <td class="is-visible">可见</td>
+                <td class="is-hidden">隐藏</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+
+    <p>从 v3.2.0 版本起，形如 .visible-*-* 的类针对每种屏幕大小都有了三种变体，每个针对 CSS 中不同的 display 属性，列表如下</p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>类组</th>
+                <th>CSS <code>display</code></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row"><code>.visible-*-block</code></th>
+                <td><code>display: block;</code></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>.visible-*-inline</code></th>
+                <td><code>display: inline;</code></td>
+            </tr>
+            <tr>
+                <th scope="row"><code>.visible-*-inline-block</code></th>
+                <td><code>display: inline-block;</code></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>因此，以超小屏幕（xs）为例，可用的 .visible-*-* 类是：.visible-xs-block、.visible-xs-inline 和 .visible-xs-inline-block。</p>
+    <p>.visible-xs、.visible-sm、.visible-md 和 .visible-lg 类也同时存在。但是从 v3.2.0 版本开始不再建议使用。除了 &lt;table> 相关的元素的特殊情况外，它们与 .visible-*-block 大体相同。</p>
+    <br>
+
+    <h1>打印类</h1>
+    <p>和常规的响应式类一样，使用下面的类可以针对打印机隐藏或显示某些内容。</p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped responsive-utilities">
+            <thead>
+            <tr>
+                <th>class</th>
+                <th>浏览器</th>
+                <th>打印机</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">
+                    <code>.visible-print-block</code><br>
+                    <code>.visible-print-inline</code><br>
+                    <code>.visible-print-inline-block</code>
+                </th>
+                <td class="is-hidden">隐藏</td>
+                <td class="is-visible">可见</td>
+            </tr>
+            <tr>
+                <th scope="row"><code>.hidden-print</code></th>
+                <td class="is-visible">可见</td>
+                <td class="is-hidden">隐藏</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>.visible-print 类也是存在的，但是从 v3.2.0 版本开始不建议使用。它与 .visible-print-block 类大致相同，除了 &lt;table> 相关元素的特殊情况外。</p>
+
+</div>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

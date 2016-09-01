@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>图片</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+
+    <h1>响应式图片</h1>
+    <p>在 Bootstrap 版本 3 中，通过为图片添加 .img-responsive 类可以让图片支持响应式布局。
+        其实质是为图片设置了 max-width: 100%;、 height: auto; 和 display: block; 属性，从而让图片在其父元素中更好的缩放。</p>
+    <p>如果需要让使用了 .img-responsive 类的图片水平居中，请使用 .center-block 类，不要用 .text-center。</p>
+    <p>SVG 图像和 IE 8-10：在 Internet Explorer 8-10 中，设置为 .img-responsive 的 SVG 图像显示出的尺寸不匀称。为了解决
+        这个问题，在出问题的地方添加 width: 100% \9; 即可。Bootstrap 并没有自动为所有图像元素设置这一属性，因为这会导致其他
+        图像格式出现错乱。</p>
+    <img src="imgs/aa.jpg" class="img-responsive" alt="Responsive image">
+    <br>
+
+    <h1>图片形状</h1>
+    <p>通过为 &lt;img> 元素添加以下相应的类，可以让图片呈现不同的形状。</p>
+    <p>跨浏览器兼容性：请时刻牢记：Internet Explorer 8 不支持 CSS3 中的圆角属性。</p>
+    <img src="imgs/aa.jpg" alt="aa" class="img-rounded">
+    <img src="imgs/aa.jpg" alt="bb" class="img-circle">
+    <img src="imgs/aa.jpg" alt="cc" class="img-thumbnail">
+    <br>
+
+</div>
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>辅助样式类</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <h1>情境文本颜色</h1>
+    <p>通过颜色来展示意图，Bootstrap 提供了一组工具类。这些类可以应用于链接，并且在鼠标经过时颜色可以还可以加深，就像默认的链接一样。</p>
+    <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+    <p class="text-primary">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+    <p class="text-success">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+    <p class="text-info">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+    <p class="text-warning">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+    <p class="text-danger">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+    <p>处理差异：如果&lt;p>元素有额外的影响，就使用&lt;span>标签来这么做！</p>
+    <span class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</span>
+    <span class="text-primary">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</span>
+    <span class="text-success">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</span>
+    <span class="text-info">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</span>
+    <span class="text-warning">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</span>
+    <span class="text-danger">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</span>
+    <br>
+
+    <h1>情境背景色</h1>
+    <p>和情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景。链接组件在鼠标经过时颜色会加深，就像上面所讲的情境文本颜色类一样</p>
+    <p class="bg-primary">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</p>
+    <p class="bg-success">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</p>
+    <p class="bg-info">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</p>
+    <p class="bg-warning">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</p>
+    <p class="bg-danger">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</p>
+    <span class="bg-primary">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</span>
+    <span class="bg-success">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</span>
+    <span class="bg-info">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</span>
+    <span class="bg-warning">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</span>
+    <span class="bg-danger">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</span>
+    <p>处理差异：如果&lt;p>元素有额外的影响，就使用&lt;div>标签来这么做！</p>
+    <div class="bg-primary">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</div>
+    <div class="bg-success">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</div>
+    <div class="bg-info">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</div>
+    <div class="bg-warning">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</div>
+    <div class="bg-danger">情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景</div>
+    <br>
+
+    <h1>关闭按钮</h1>
+    <p>通过使用一个象征关闭的图标，可以让模态框和警告框消失。</p>
+    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <br>
+
+    <h1>三角符号</h1>
+    <p>通过使用三角符号可以指示某个元素具有下拉菜单的功能。注意，向上弹出式菜单中的三角符号是反方向的。</p>
+    <span class="caret"></span>
+    <br>
+
+    <h1>快速浮动</h1>
+    <p>通过添加一个类，可以将任意元素向左或向右浮动。!important 被用来明确 CSS 样式的优先级。这些类还可以作为 mixin（参见 less 文档） 使用</p>
+    <div class="pull-left">向左浮动</div>
+    <div class="pull-right">向右浮动</div>
+			<pre>
+			// Classes
+			.pull-left {
+			  float: left !important;
+			}
+			.pull-right {
+			  float: right !important;
+			}
+
+			// Usage as mixins
+			.element {
+			  .pull-left();
+			}
+			.another-element {
+			  .pull-right();
+			}
+			</pre>
+    <p>不能用于导航条组件中：排列导航条中的组件时可以使用这些工具类：.navbar-left 或 .navbar-right 。</p>
+    <br>
+
+    <h1>让内容块居中</h1>
+    <p>为任意元素设置 display: block 属性并通过 margin 属性让其中的内容居中。下面列出的类还可以作为 mixin 使用。</p>
+    <div class="center-block">为任意元素设置 display: block 属性并通过 margin 属性让其中的内容居中。</div>
+			<pre>
+			// Class
+			.center-block {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			}
+
+			// Usage as a mixin
+			.element {
+			  .center-block();
+			}
+			</pre>
+    <br>
+
+    <h1>清除浮动</h1>
+    <p>通过为父元素添加 .clearfix 类可以很容易地清除浮动（float）。这里所使用的是 Nicolas Gallagher 创造的 micro clearfix 方式。此类还可以作为 mixin 使用。</p>
+    <div class="clearfix">通过为父元素添加 .clearfix 类可以很容易地清除浮动（float）。</div>
+			<pre>
+			// Mixin itself
+			.clearfix() {
+			  &:before,
+			  &:after {
+			    content: " ";
+			    display: table;
+			  }
+			  &:after {
+			    clear: both;
+			  }
+			}
+
+			// Usage as a mixin
+			.element {
+			  .clearfix();
+			}
+			</pre>
+    <br>
+
+    <h1>显示或隐藏内容</h1>
+    <p>.show 和 .hidden 类可以强制任意元素显示或隐藏(对于屏幕阅读器也能起效)。这些类通过 !important 来避免 CSS 样式优先级问题，就像 quick floats 一样的做法。注意，这些类只对块级元素起作用，另外，还可以作为 mixin 使用。</p>
+    <p>.hide 类仍然可用，但是它不能对屏幕阅读器起作用，并且从 v3.0.1 版本开始就不建议使用了。请使用 .hidden 或 .sr-only 。</p>
+    <p>另外，.invisible 类可以被用来仅仅影响元素的可见性，也就是所，元素的 display 属性不被改变，并且这个元素仍然能够影响文档流的排布。</p>
+    <div class="show">可以强制任意元素显示</div>
+    <div class="hidden">可以强制任意元素隐藏</div>
+			<pre>
+			// Classes
+			.show {
+			  display: block !important;
+			}
+			.hidden {
+			  display: none !important;
+			}
+			.invisible {
+			  visibility: hidden;
+			}
+
+			// Usage as mixins
+			.element {
+			  .show();
+			}
+			.another-element {
+			  .hidden();
+			}
+			</pre>
+    <br>
+
+    <h1>屏幕阅读器和键盘导航</h1>
+    <p>.sr-only 类可以对屏幕阅读器以外的设备隐藏内容。.sr-only 和 .sr-only-focusable 联合使用的话可以在元素有焦点的时候再次显示出来（例如，使用键盘导航的用户）。对于遵循 可访问性的最佳实践 很有必要。这个类也可以作为 mixin 使用。</p>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+			<pre>
+			// Usage as a mixin
+			.skip-navigation {
+			  .sr-only();
+			  .sr-only-focusable();
+			}
+			</pre>
+    <br>
+
+    <h1>图片替换</h1>
+    <p>使用 .text-hide 类或对应的 mixin 可以用来将元素的文本内容替换为一张背景图。</p>
+    <h1 class="text-hide">Custom heading</h1>
+    <br>
+</div>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
